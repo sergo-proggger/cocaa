@@ -1,11 +1,11 @@
 {
   "extends": "stylelint-config-standard-scss",
   "plugins": ["stylelint-order"],
-  "ignoreFiles": [
+  "ignoreFiles": [ 
     "**/*.js",
     "**/*.md",
     "**/*.json",
-    "./src/assets/base/normalize.scss"
+    "./src/scss/base/normalize.scss"
   ],
   "rules": {
     "declaration-empty-line-before": "never",
