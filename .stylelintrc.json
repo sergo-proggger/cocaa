@@ -5,7 +5,7 @@
     "**/*.js",
     "**/*.md",
     "**/*.json",
-    "./src/scss/base/normalize.scss"
+    "./src/assets/base/normalize.scss"
   ],
   "rules": {
     "declaration-empty-line-before": "never",
