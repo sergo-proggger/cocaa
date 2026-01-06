@@ -1,0 +1,147 @@
+.articles {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 56px 20px;
+  color: var(--text);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 1.1;
+    margin: 0 0 8px;
+  }
+
+  &__lead {
+    max-width: 360px;
+    color: var(--muted);
+    margin: 0;
+    font-size: 14px;
+    line-height: 2.6;
+  }
+
+  &__ui {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;
+  }
+
+  &__nav {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid;
+    
+    cursor: pointer;
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #0f1115;
+    display: inline-block;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 22px;
+  }
+}
+
+/* Карточка — весь текст под изображением */
+.card {
+  display: flex;
+  flex-direction: column; /* ключевой момент */
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(20, 20, 43, 0.08);
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__body {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.35;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  &__actions {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__btn {
+    border: 0;
+    background: blue;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    &:hover {
+    }
+  }
+
+  &__icon {
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Если нужна «высокая» первая карточка с большим изображением */
+  &.card--tall .card__img {
+    height: 360px;
+  }
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .articles__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .articles__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .articles__grid {
+    grid-template-columns: 1fr;
+  }
+}
