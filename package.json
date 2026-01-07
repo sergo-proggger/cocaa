@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "intl-tel-input": "^19.2.16",
-    "swiper": "^11.0.5"
+    "swiper": "^11.2.10"
   }
 }
